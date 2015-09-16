@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Game Zie Cam</title>
+    <meta name="theme-color" content="#000">
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -15,6 +16,9 @@
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/camera.css">
     <!-- endbuild -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300' rel='stylesheet' type='text/css'>
   </head>
   <body ng-app="gzcam3App" ngsf-fullscreen>
     <!--[if lte IE 8]>
@@ -23,12 +27,13 @@
 
     <!-- Add your site or application content here -->
     <div ng-controller="MainCtrl">
-      <div id="header" class="navbar navbar-static-top" role="navigation">
+      <div id="header" class="navbar navbar-static-top no-select" role="navigation">
 
-        <h1>GameZie Cam</h1>
+        <h1>GAME<em>ZIE</em> CAM</h1>
 
-        <div id="fullscreen_btn" ng-bind-template="{{fsText}}" ngsf-toggle-fullscreen>
-          Fullscreen
+        <div id="fullscreen_btn" ngsf-toggle-fullscreen show-if-fullscreen-enabled>
+          <i show-if-fullscreen=false class="material-icons md-36">fullscreen</i>
+          <i show-if-fullscreen=true class="material-icons md-36">fullscreen_exit</i>
         </div>
 
       </div>

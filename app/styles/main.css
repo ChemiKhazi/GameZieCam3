@@ -5,10 +5,27 @@
   padding: 0.2em 0;
 }
 
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+.no-select {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
 html, body {
-  background: #b5b6bb;
+  background: #000;
+  color: #ffeee2;
   height: 100%;
   width: 100%;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 400;
 }
 
 #header {
@@ -16,17 +33,23 @@ html, body {
 }
 
 #header>h1 {
-  padding: 0;
   margin: 0;
-  height: 50px;
+  font-size: 24px;
+  font-weight: bold;
+  height: 24px;
   width: 150px;
   overflow: hidden;
+  position: absolute;
+  left: 10px;
+  top: 5px;
 }
 
 #fullscreen_btn {
   top: 0px;
-  right: 20px;
+  right: 5px;
   position: fixed;
+  height: 24px;
+  vertical-align: bottom;
 }
 
 #content {
@@ -36,13 +59,14 @@ html, body {
   left: 0px;
   height: 100%;
   width: 100%;
-  background:
-    url('../images/border-tl.png') top left no-repeat,
-    url('../images/border-tr.png') top right no-repeat,
-    url('../images/border-top.png') top left repeat-x,
-    url('../images/border-bl.png') bottom left no-repeat,
-    url('../images/border-br.png') bottom right no-repeat,
-    url('../images/border-bm.png') bottom left repeat-x,
+  background-color: #4d453e;
+  -webkit-border-radius: 10px;
+  -webkit-border-bottom-right-radius: 40px;
+  -moz-border-radius: 10px;
+  -moz-border-radius-bottomright: 40px;
+  border-radius: 10px;
+  border-bottom-right-radius: 40px;
+  border: 3px solid #000;
 }
 
 /* Responsive: Portrait tablets and up */
@@ -54,11 +78,27 @@ html, body {
   }
 
   #header>h1 {
-    height: 150px;
-    width: 60px;
+    position: fixed;
+    top: auto;
+    bottom: 80px;
+    left: -50px;
+  	transform: rotate(-90deg);
+  }
+
+  #fullscreen_btn {
+    top: 15px;
+    right: auto;
+    left: 10px;
   }
 
   #content {
     padding: 0px 15px 0px 60px;
+    border-width: 10px;
+    -webkit-border-radius: 20px;
+    -webkit-border-bottom-right-radius: 60px;
+    -moz-border-radius: 20px;
+    -moz-border-radius-bottomright: 60px;
+    border-radius: 20px;
+    border-bottom-right-radius: 60px;
   }
 }
