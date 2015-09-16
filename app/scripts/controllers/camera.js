@@ -8,10 +8,7 @@
  * Controller of the gzcam3App
  */
 angular.module('gzcam3App')
-  .controller('CameraCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+  .controller('CameraCtrl', ['$scope', function ($scope) {
+    $scope.video;
+    $scope.videoCanvas;
+  }]);

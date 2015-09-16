@@ -8,10 +8,8 @@
  * Controller of the gzcam3App
  */
 angular.module('gzcam3App')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
+  .controller('MainCtrl', function ($scope) {
+    $scope.fsText = "Fullscreen";
+    $scope.openAbout = function() {
+    };
   });
